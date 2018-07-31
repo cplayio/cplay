@@ -78,7 +78,7 @@ bool fLiteMode = false;
 bool fEnableInstantX = true;
 int nInstantXDepth = 10;
 int nDarksendRounds = 2;
-int nAnonymizeBitradioAmount = 1000;
+int nAnonymizecPlayAmount = 1000;
 int nLiquidityProvider = 0;
 /** Spork enforcement enabled time */
 int64_t enforceMasternodePaymentsTime = 4085657524;
@@ -1042,7 +1042,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "Bitradio";
+    const char* pszModule = "cPlay";
 #endif
     if (pex)
         return strprintf(
@@ -1072,13 +1072,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Bitradio
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Bitradio
-    // Mac: ~/Library/Application Support/Bitradio
-    // Unix: ~/.Bitradio
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\cPlay
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\cPlay
+    // Mac: ~/Library/Application Support/cPlay
+    // Unix: ~/.cPlay
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Bitradio";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "cPlay";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1090,10 +1090,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "Bitradio";
+    return pathRet / "cPlay";
 #else
     // Unix
-    return pathRet / ".Bitradio";
+    return pathRet / ".cPlay";
 #endif
 #endif
 }
@@ -1142,7 +1142,7 @@ void ClearDatadirCache()
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "Bitradio.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "cPlay.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -1187,7 +1187,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "Bitradiod.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "cPlayd.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
@@ -1348,7 +1348,7 @@ void AddTimeData(const CNetAddr& ip, int64_t nTime)
                 if (!fMatch)
                 {
                     fDone = true;
-                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong Bitradio will not work properly.");
+                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong cPlay will not work properly.");
                     strMiscWarning = strMessage;
                     LogPrintf("*** %s\n", strMessage);
                     uiInterface.ThreadSafeMessageBox(strMessage, "", CClientUIInterface::MSG_WARNING);

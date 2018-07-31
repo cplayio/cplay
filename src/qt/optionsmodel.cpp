@@ -66,13 +66,13 @@ void OptionsModel::Init()
     if (!settings.contains("nDarksendRounds"))
         settings.setValue("nDarksendRounds", 2);
     nDarksendRounds = settings.value("nDarksendRounds").toLongLong();
-    if (!settings.contains("nAnonymizeBitradioAmount"))
-        settings.setValue("nAnonymizeBitradioAmount", 1000);
-    nAnonymizeBitradioAmount = settings.value("nAnonymizeBitradioAmount").toLongLong();
+    if (!settings.contains("nAnonymizecPlayAmount"))
+        settings.setValue("nAnonymizecPlayAmount", 1000);
+    nAnonymizecPlayAmount = settings.value("nAnonymizecPlayAmount").toLongLong();
     if (settings.contains("nDarksendRounds"))
         SoftSetArg("-darksendrounds", settings.value("nDarksendRounds").toString().toStdString());
-    if (settings.contains("nAnonymizeBitradioAmount"))
-        SoftSetArg("-anonymizetransferamount", settings.value("nAnonymizeBitradioAmount").toString().toStdString());
+    if (settings.contains("nAnonymizecPlayAmount"))
+        SoftSetArg("-anonymizetransferamount", settings.value("nAnonymizecPlayAmount").toString().toStdString());
 
 
 
@@ -206,8 +206,8 @@ QVariant OptionsModel::data(const QModelIndex & index, int role) const
             return fCoinControlFeatures;
         case DarksendRounds:
             return QVariant(nDarksendRounds);
-        case AnonymizeBitradioAmount:
-            return QVariant(nAnonymizeBitradioAmount);
+        case AnonymizecPlayAmount:
+            return QVariant(nAnonymizecPlayAmount);
         case UseBlackTheme:
             return QVariant(fUseBlackTheme);
         default:
@@ -318,10 +318,10 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
             settings.setValue("nDarksendRounds", nDarksendRounds);
             emit darksendRoundsChanged(nDarksendRounds);
             break;
-        case AnonymizeBitradioAmount:
-            nAnonymizeBitradioAmount = value.toInt();
-            settings.setValue("nAnonymizeBitradioAmount", nAnonymizeBitradioAmount);
-            emit AnonymizeBitradioAmountChanged(nAnonymizeBitradioAmount);
+        case AnonymizecPlayAmount:
+            nAnonymizecPlayAmount = value.toInt();
+            settings.setValue("nAnonymizecPlayAmount", nAnonymizecPlayAmount);
+            emit AnonymizecPlayAmountChanged(nAnonymizecPlayAmount);
             break;
         default:
             break;

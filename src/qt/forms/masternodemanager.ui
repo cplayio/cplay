@@ -38,7 +38,7 @@
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
-         <string>Bitradio Network</string>
+         <string>cPlay Network</string>
         </attribute>
         <layout class="QGridLayout" name="gridLayout">
          <item row="1" column="0">
@@ -98,7 +98,7 @@
            <item>
             <widget class="QLabel" name="label_2">
              <property name="text">
-              <string>Bitradio Node Count:</string>
+              <string>cPlay Node Count:</string>
              </property>
             </widget>
            </item>

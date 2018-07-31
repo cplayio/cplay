@@ -1174,7 +1174,7 @@ public:
 
 
 
-/** Internal Bitradios.
+/** Internal cPlays.
  * Database key is acentry<account><counter>.
  */
 class CAccountingEntry

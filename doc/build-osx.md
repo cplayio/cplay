@@ -7,12 +7,12 @@ software written by Eric Young (eay@cryptsoft.com) and UPnP software written by
 Thomas Bernard.
 
 
-Mac OS X Bitradiod build instructions
+Mac OS X cPlayd build instructions
 Laszlo Hanyecz <solar@heliacal.net>
 Douglas Huff <dhuff@jrbobdobbs.org>
 
 
-See readme-qt.rst for instructions on building Bitradio QT, the
+See readme-qt.rst for instructions on building cPlay QT, the
 graphical user interface.
 
 Tested on 10.5 and 10.6 intel.  PPC is not supported because it's big-endian.
@@ -27,7 +27,7 @@ but you can get the current version from http://developer.apple.com
 
 1.  Clone the github tree to get the source code:
 
-git clone http://github.com/Bitradiodev/Bitradio Bitradio
+git clone http://github.com/cPlaydev/cPlay cPlay
 
 2.  Download and install MacPorts from http://www.macports.org/
 
@@ -41,14 +41,14 @@ sudo port install boost db48 openssl miniupnpc
 Optionally install qrencode (and set USE_QRCODE=1):
 sudo port install qrencode
 
-4.  Now you should be able to build Bitradiod:
+4.  Now you should be able to build cPlayd:
 
-cd Bitradio/src
+cd cPlay/src
 make -f makefile.osx
 
 Run:
-  ./Bitradiod --help  # for a list of command-line options.
+  ./cPlayd --help  # for a list of command-line options.
 Run
-  ./Bitradiod -daemon # to start the Bitradio daemon.
+  ./cPlayd -daemon # to start the cPlay daemon.
 Run
-  ./Bitradiod help # When the daemon is running, to get a list of RPC commands
+  ./cPlayd help # When the daemon is running, to get a list of RPC commands

@@ -83,7 +83,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Bitradio Signed Message:\n";
+const string strMessageMagic = "cPlay Signed Message:\n";
 
 std::set<uint256> setValidatedTx;
 
@@ -2090,7 +2090,7 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
       if (nStakeReward > nCalculatedStakeReward)
           return DoS(100, error("ConnectBlock() : coinstake pays too much(actual=%d vs calculated=%d)", nStakeReward, nCalculatedStakeReward));
 
-      //For Bitradio, first output must go to Bitradio address
+      //For cPlay, first output must go to cPlay address
       if (vtx[0].vout[1].scriptPubKey != GetFoundationScript(pindex->nHeight))
           return DoS(100, error("ConnectBlock() : coinstake does not pay to the charity in the first output"));
 
@@ -2669,7 +2669,7 @@ bool CBlock::CheckBlock(bool fCheckPOW, bool fCheckMerkleRoot, bool fCheckSig) c
 
                     CTxDestination address1;
                     ExtractDestination(payee, address1);
-                    CBitradioAddress address2(address1);
+                    CcPlayAddress address2(address1);
 
                     if(!foundPaymentAndPayee) {
                         if(fDebug) { LogPrintf("CheckBlock() : Couldn't find masternode payment(%d|%d) or payee(%d|%s) nHeight %d. \n", foundPaymentAmount, masternodePaymentAmount, foundPayee, address2.ToString().c_str(), pindexBest->nHeight+1); }
@@ -3374,7 +3374,7 @@ struct CImportingNow
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("Bitradio-loadblk");
+    RenameThread("cPlay-loadblk");
 
     CImportingNow imp;
 

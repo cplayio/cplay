@@ -53,12 +53,12 @@ bool AppInit(int argc, char* argv[])
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
             // First part of help message is specific to bitcoind / RPC client
-            std::string strUsage = _("Bitradio version") + " " + FormatFullVersion() + "\n\n" +
+            std::string strUsage = _("cPlay version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  Bitradiod [options]                     " + "\n" +
-                  "  Bitradiod [options] <command> [params]  " + _("Send command to -server or Bitradiod") + "\n" +
-                  "  Bitradiod [options] help                " + _("List commands") + "\n" +
-                  "  Bitradiod [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  cPlayd [options]                     " + "\n" +
+                  "  cPlayd [options] <command> [params]  " + _("Send command to -server or cPlayd") + "\n" +
+                  "  cPlayd [options] help                " + _("List commands") + "\n" +
+                  "  cPlayd [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
@@ -68,7 +68,7 @@ bool AppInit(int argc, char* argv[])
 
         // Command-line RPC
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "Bitradio:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "cPlay:"))
                 fCommandLine = true;
 
         if (fCommandLine)

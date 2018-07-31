@@ -41,7 +41,7 @@ QString BitcoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("BRO");
+    case BTC: return QString("CPL");
     case mBTC: return QString("mBRO");
     case uBTC: return QString::fromUtf8("μBRO");
     default: return QString("???");
@@ -52,9 +52,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("Bitradios");
-    case mBTC: return QString("Milli-Bitradios (1 / 1,000)");
-    case uBTC: return QString("Micro-Bitradios (1 / 1,000,000)");
+    case BTC: return QString("cPlays");
+    case mBTC: return QString("Milli-cPlays (1 / 1,000)");
+    case uBTC: return QString("Micro-cPlays (1 / 1,000,000)");
     default: return QString("???");
     }
 }

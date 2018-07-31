@@ -67,7 +67,7 @@ struct MessageTableEntry
     }
 };
 
-/** Interface to Bitradio Secure Messaging from Qt view code. */
+/** Interface to cPlay Secure Messaging from Qt view code. */
 class MessageModel : public QAbstractTableModel
 {
     Q_OBJECT

@@ -7,23 +7,23 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Bitradio-Qt</string>
+	<string>cPlay-Qt</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleExecutable</key>
-	<string>Bitradio-Qt</string>
+	<string>cPlay-Qt</string>
 	<key>CFBundleIdentifier</key>
-	<string>co.Bitradio.Bitradio-Qt</string>
+	<string>co.cPlay.cPlay-Qt</string>
         <key>CFBundleURLTypes</key>
         <array>
           <dict>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
-            <string>co.Bitradio.BitradioPayment</string>
+            <string>co.cPlay.cPlayPayment</string>
             <key>CFBundleURLSchemes</key>
             <array>
-              <string>Bitradio</string>
+              <string>cPlay</string>
             </array>
           </dict>
         </array>

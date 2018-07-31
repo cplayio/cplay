@@ -7,7 +7,7 @@ cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP
 software written by Thomas Bernard.
 
 
-See readme-qt.rst for instructions on building Bitradio QT, the
+See readme-qt.rst for instructions on building cPlay QT, the
 graphical user interface.
 
 WINDOWS BUILD NOTES
@@ -47,7 +47,7 @@ Secp256k1
 
 OpenSSL
 -------
-MSYS Bitradio:
+MSYS cPlay:
 un-tar sources with MSYS 'tar xfz' to avoid issue with symlinks (OpenSSL ticket 2377)
 change 'MAKE' env. variable from 'C:\MinGW32\bin\mingw32-make.exe' to '/c/MinGW32/bin/mingw32-make.exe'
 
@@ -57,7 +57,7 @@ make
 
 Berkeley DB
 -----------
-MSYS Bitradio:
+MSYS cPlay:
 
     cd /c/dev/coindeps32/db-4.8.30.NC-mgw/build_unix
     sh ../dist/configure --enable-mingw --enable-cxx
@@ -73,7 +73,7 @@ DOS prompt:
 
 Secp256k1
 -----------
-MSYS Bitradio:
+MSYS cPlay:
 
     ./autogen.sh
     ./configure --enable-module-recovery --prefix /c/dev/coindeps32/Secp256k1
@@ -84,17 +84,17 @@ MiniUPnPc
 ---------
 UPnP support is optional, make with USE_UPNP= to disable it.
 
-MSYS Bitradio:
+MSYS cPlay:
 
     cd /c/miniupnpc-1.6-mgw
     make -f Makefile.mingw
     mkdir miniupnpc
     cp *.h miniupnpc/
 
-Build Bitradiod
+Build cPlayd
 -------
 DOS prompt:
 
-    cd \Bitradio\src
+    cd \cPlay\src
     mingw32-make -f makefile.mingw
-    strip Bitradiod.exe
+    strip cPlayd.exe

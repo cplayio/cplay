@@ -165,7 +165,7 @@ public:
 
 
 // -- get at the data
-class CBitradioAddress_B : public CBitradioAddress
+class CcPlayAddress_B : public CcPlayAddress
 {
 public:
     uint8_t getVersion()
