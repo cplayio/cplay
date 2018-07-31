@@ -1,0 +1,11 @@
+debug
+build
+Makefile.Release
+Makefile.Debug
+Makefile
+object_script.cplay-qt.Debug
+object_script.cplay-qt.Release
+cplay.pro.user
+cplay-qt_plugin_import.cpp
+src/qt/locale/*.qm
+release
