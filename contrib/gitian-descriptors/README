@@ -177,7 +177,7 @@ $ wget http://download.oracle.com/berkeley-db/db-6.1.26.NC.tar.gz;
 $ wget http://prdownloads.sourceforge.net/libpng/libpng-1.6.18.tar.xz;
 $ wget http://zlib.net/zlib-1.2.8.tar.gz;
 $ wget https://fukuchi.org/works/qrencode/qrencode-3.4.4.tar.gz
-$ wget http://sourceforge.net/projects/boost/files/boost/1.59.0/boost_1_59_0.tar.bz2/download -Oboost_1_59_0.tar.bz2;
+$ wget http://sourceforge.net/projects/boost/files/boost/1.67.0_1/boost_1_59_0.tar.bz2/download -Oboost_1_59_0.tar.bz2;
 $ wget https://svn.boost.org/trac/boost/raw-attachment/ticket/7262/boost-mingw.patch
 $ wget http://www.openssl.org/source/openssl-1.0.2d.tar.gz
 $ wget http://download.qt.io/archive/qt/5.5/5.5.0/single/qt-everywhere-opensource-src-5.5.0.tar.xz;

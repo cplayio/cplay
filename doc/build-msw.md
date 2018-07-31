@@ -24,7 +24,7 @@ Dependencies
 Libraries you need to download separately and build:
 
                 default path               download
-OpenSSL         \openssl-1.0.1p-mgw        http://www.openssl.org/source/
+OpenSSL         \openssl-1.0.2o_2-mgw        http://www.openssl.org/source/
 Berkeley DB     \db-4.8.30.NC-mgw          http://www.oracle.com/technology/software/products/berkeley-db/index.html
 Boost           \boost-1.57.0-mgw          http://www.boost.org/users/download/
 miniupnpc       \miniupnpc-1.6-mgw         http://miniupnp.tuxfamily.org/files/
@@ -50,8 +50,7 @@ OpenSSL
 MSYS cPlay:
 un-tar sources with MSYS 'tar xfz' to avoid issue with symlinks (OpenSSL ticket 2377)
 change 'MAKE' env. variable from 'C:\MinGW32\bin\mingw32-make.exe' to '/c/MinGW32/bin/mingw32-make.exe'
-
-cd /c/dev/coindeps32/openssl-1.0.1p-mgw
+cd /c/dev/coindeps32/1.0.2o_2-mgw
 ./config
 make
 
